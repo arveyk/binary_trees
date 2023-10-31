@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include <stdlib.h>
+#include <stdio.h>
 #include "binary_trees.h"
 
 /**
@@ -21,10 +21,10 @@ int main(void)
 	binary_tree_print(root);
 	
 	ret = binary_tree_is_leaf(root);
-	print("Is %d a leaf: %d\n" root->n, ret);
-	ret = binary_tree_is_leaf(root-right);
-	print("Is %d a leaf: %d\n" root->right->n, ret);
+	printf("Is %d a leaf: %d\n", root->n, ret);
+	ret = binary_tree_is_leaf(root->right);
+	printf("Is %d a leaf: %d\n", root->right->n, ret);
 	ret = binary_tree_is_leaf(root->right->right);
-	print("Is %d a leaf: %d\n" root->right->right->n, ret);
+	printf("Is %d a leaf: %d\n", root->right->right->n, ret);
 	return (0);
 }
