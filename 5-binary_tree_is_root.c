@@ -16,10 +16,10 @@ int binary_tree_is_root(const binary_tree_t *node)
 		return (0);
 	if (node->right && node->left)
 	{
-		lft = node->lft;
-		rgt = node->rgt;
+		lft = node->left;
+		rgt = node->right;
 
-		if (rgt->right || lft->right && rgt->left || lft->left)
+		if ((rgt->right || lft->right) || (rgt->left || lft->left))
 			return (1);
 	}
 	return (0);
