@@ -11,24 +11,21 @@ int main(void)
 {
 
 	binary_tree_t *root;
-	int bst;
 
 	root = binary_tree_node(NULL, 98);
-	root->left = binary_tree_node(root, 12);
-	root->right= binary_tree_node(root, 128);
-	root->left->right = binary_tree_node(root->left, 54);
-	root->right->right = binary_tree_node(root->right, 402);
-	root->left->left = binary_tree_node(root->left, 10);
-
+	root->left = binary_tree_node(root, 64);
+	root->left->left = binary_tree_node(root->left, 32);
 	binary_tree_print(root);
-	bst = binary_tree_is_bst(root);
-	printf("Is %d bst: %d\n", root->n, bst);
-	bst = binary_tree_is_bst(root-left);
-	printf("Is %d bst: %d\n", root->left->n, bst);
-
-	root->right->left = binary_tree_node(root->right, 97);
+	printf("Rotate-right %d\n", root->n);
+	root = binary_tree_rotate_right(root);
 	binary_tree_print(root);
-	bst = binary_tree_is_bst(root);
-	printf("Is %d bst: %d\n", root->n, bst);
+	printf("\n");
+
+	root->left->left = binary_tree_node(root->left, 20);
+	root->left->right = binary_tree_node(root->left, 56);
+	binary_tree_print(root);
+	printf("Rotate-right %d\n", root->n);
+	root = binary_tree_rotate_right(root);
+	binary_tree_print(root);
 	return (0);
 }
