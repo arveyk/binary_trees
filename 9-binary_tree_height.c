@@ -1,22 +1,23 @@
 #include "binary_trees.h"
 
-size_t high(binary_tree_t * tree2)
+/**
+ * high - recursive function to get height
+ *
+ * @tree2: pointer to tree
+ * Return: height of tree
+ */
+size_t high(binary_tree_t *tree2)
 {
 	size_t lft;
 	size_t rgt;
 
 	if (tree2 == NULL)
 		return (0);
-	else
-	{
-		rgt = high(tree2->right);
-		lft = high(tree2->left);
+	rgt = high(tree2->right);
+	lft = high(tree2->left);
 	if (lft > rgt)
 		return (lft + 1);
-	else
-		return (rgt + 1);
-	}
-	return (0);
+	return (rgt + 1);
 }
 
 /**
