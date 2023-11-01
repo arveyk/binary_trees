@@ -3,6 +3,16 @@
 #include "binary_trees.h"
 
 /**
+ * print_num - prints a number
+ *
+ * @n: the number to be printed
+ */
+void print_num(int n)
+{
+	printf("%d\n", n);
+}
+
+/**
  * main - Entry Point
  *
  * Return: Always 0
