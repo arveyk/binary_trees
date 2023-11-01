@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * binary_tree_preorder - traverses binary tree using preorder traversal
+ * binary_tree_inorder - traverses binary tree using preorder traversal
  *
  * @tree: pointer to tree to be travesed
  * @func: pointer to the bin tree trav function
