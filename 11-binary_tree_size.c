@@ -6,7 +6,6 @@
  * binary_tree_size - traverses binary tree using preorder traversal
  *
  * @tree: pointer to tree to be travesed
- * @func: pointer to the bin tree trav function
  * Return: No return value
  */
 size_t binary_tree_size(const binary_tree_t *tree)
