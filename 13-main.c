@@ -11,7 +11,7 @@ int main(void)
 {
 
 	binary_tree_t *root;
-	size_t size;
+	size_t nodes;
 
 	root = binary_tree_node(NULL, 98);
 	root->left = binary_tree_node(root, 12);
