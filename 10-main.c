@@ -20,11 +20,11 @@ int main(void)
 	binary_tree_insert_right(root, 128);
 	binary_tree_print(root);
 
-	depth = binary_tree_height(root);
+	depth = binary_tree_depth(root);
 	printf("Depth of  %d: %lu\n", root->n, depth);
-	depth = binary_tree_height(root->right);
+	depth = binary_tree_depth(root->right);
 	printf("Depth of  %d: %lu\n", root->right->n, depth);
-	depth = binary_tree_height(root->left->right);
+	depth = binary_tree_depth(root->left->right);
 	printf("Depth of  %d: %lu\n", root->left->right->n, depth);
 	return (0);
 }
